@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+
+    <title>ICOECA-2023</title>
+	<link rel="shortcut icon" type="image/jpg" href="./web_logo.png"/>
+
+    <link rel="stylesheet" href="dist/reset.css" />
+    <link rel="stylesheet" href="dist/reveal.css" />
+    <link rel="stylesheet" href="dist/theme/moon.css" />
+	    <script src="https://kit.fontawesome.com/b0f29e9bfe.js" crossorigin="anonymous"></script>
+
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css" />
+
+	<style>
+		* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.book-section {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: sans-serif;
+    /* background-color: black; */
+}
+
+/* Book */
+.book {
+    position: relative;
+    width: 350px;
+    height: 500px;
+    transition: transform 0.5s;
+}
+
+.paper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+
+}
+
+.front,
+.back {
+    background-color: white;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transform-origin: left;
+    transition: transform 0.5s;
+}
+
+.front {
+    z-index: 1;
+    backface-visibility: hidden;
+    border-left: 3px solid powderblue;
+}
+
+.back {
+    z-index: 0;
+}
+
+.front-content,
+.back-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.back-content {
+    transform: rotateY(180deg)
+}
+
+ 
+
+/* Paper flip effect */
+.flipped .front,
+.flipped .back {
+    transform: rotateY(-180deg);
+}
+
+/* Controller Buttons */
+button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    margin: 10px;
+    transition: transform 0.5s;
+}
+
+button:focus {
+    outline: none;
+}
+
+button:hover i {
+    color: #636363;
+}
+
+i {
+    font-size: 50px;
+    color: gray;
+}
+
+/* Paper stack order */
+#p1 {
+    z-index: 3;
+}
+
+#p2 {
+    z-index: 2;
+}
+
+#p3 {
+    z-index: 1;
+}
+	</style>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section style="height: 50vh">
+			<img src="./web_logo.png" alt="logo" width="100" height="100">
+          <h4 style="font-size: 1.2rem; margin-bottom: 1rem; letter-spacing: .3rem;">
+            Rashtreeya Sikshana Samithi Trust®
+          </h4>
+          <h1
+            style="letter-spacing: .3rem;font-size: 2.5rem; margin-bottom: 1rem; font-weight: bolder"
+          >
+            RV College of Engineering ®
+          </h1>
+          <p style="letter-spacing: .3rem;font-size: 1rem; margin-bottom: 1rem">
+            Autonomous Institution affiliated to Visvesvaraya Technological
+            University, <br />
+            Belagavi Approved By AICTE, New Delhi, Accredited By NBA, New Delhi
+          </p>
+
+          <h2 style="letter-spacing: .3rem;font-size: 1.8rem; margin-bottom: 1rem; font-weight: bold">
+            Department of Master of Computer Applications
+          </h2>
+          <p style="letter-spacing: .3rem;margin-bottom: 1rem; font-size: 1.2rem"></p>
+            Invites you to the Inauguration of,
+          </p>
+          <h3 style="letter-spacing: .3rem;font-size: 2.3rem; margin-bottom: 1rem; margin-top: 0.6rem;">
+            International Conference on Expert Clouds and Applications <br>
+            (ICOECA-2023) 9ᵗʰ-10ᵗʰ February 2023
+          </h3>
+        </section>
+		<section>
+			<h1 class="r-fit-text" style="letter-spacing: .3rem;font-size: 2.5rem; margin-bottom: 3rem; font-weight: bolder">Invocation and Lighting of Digital Lamp</h1>
+			<br>
+			<a href="#/inauguration" style="padding: 0.6rem 1rem; background-color: #3A8CD2;color: white; border-radius: 4px;">Let's light up the lamp</a>
+		</section>
+        <section id="inauguration">
+          <video
+            style="width: 100vw; height: 100%"
+            controls="false"
+            data-autoplay
+          >
+            <source src="./lamp.MOV" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </section>
+		<section>
+			<h1 class="r-fit-text" style="color: #3A8CD2;letter-spacing: .3rem;font-size: 1.8rem; margin-bottom: 3rem; font-weight: bolder">Welcome address</h1>
+			<h1 class="r-fit-text" style="letter-spacing: .3rem;font-size: 2.5rem; margin-bottom: 3rem; font-weight: bolder">Dr. K S Geetha,</h1>
+			<h1 class="r-fit-text" style="letter-spacing: .3rem;font-size: 2.5rem; margin-bottom: 3rem; font-weight: bolder">Vice Principal, RVCE</h1>
+		</section>
+
+		<section>
+			<h1 class="r-fit-text" style="color: #3A8CD2;letter-spacing: .3rem;font-size: 1.8rem; margin-bottom: 3rem; font-weight: bolder">About the Conference</h1>
+			<h1 class="r-fit-text" style="letter-spacing: .3rem;font-size: 2.5rem; margin-bottom: 3rem; font-weight: bolder">Dr. Andhe Dharani</h1>
+			<h1 class="r-fit-text" style="letter-spacing: .3rem;font-size: 2.5rem; margin-bottom: 3rem; font-weight: bolder">General Chair, ICOECA-2023</h1>
+			<!-- <h1 class="r-fit-text" style="letter-spacing: .3rem;font-size: 2.5rem; margin-bottom: 3rem; font-weight: bolder">ICOECA-2023</h1> -->
+		</section>
+
+		<section>
+			<h1 class="r-fit-text" style="color: #3A8CD2;letter-spacing: .3rem;font-size: 1.8rem; margin-bottom: 3rem; font-weight: bolder">Address by Chief Guest</h1>
+			<h1 class="r-fit-text" style="letter-spacing: .3rem;font-size: 2.5rem; margin-bottom: 3rem; font-weight: bolder">Dr. R Kanthavel,</h1>
+<h1 class="r-fit-text" style="letter-spacing: .3rem;font-size: 2.5rem; margin-bottom: 3rem; font-weight: bolder">Department of Computer Engineering,</h1>
+<h1 class="r-fit-text" style="letter-spacing: .3rem;font-size: 2.5rem; margin-bottom: 3rem; font-weight: bolder">
+King Khalid University, Abu Dhabi</h1>
+		</section>
+		
+
+
+		<section>
+			<h1 class="r-fit-text" style="letter-spacing: .3rem;font-size: 2.5rem; margin-bottom: 3rem; font-weight: bolder">Release of Digital Souvenir by Dignitaries in the
+Digital Conference</h1>
+			<br>
+			<a href="#" style="padding: 0.6rem 1rem; background-color: #3A8CD2;color: white; border-radius: 4px;">Let's light up the lamp</a>
+		</section>
+
+
+
+		<section >
+			<div class="book-section">
+			 <!-- Previous Button -->
+    <button id="prev-btn">
+        <i class="fas fa-arrow-circle-left"></i>
+    </button>
+
+
+    <!-- Book -->
+    <div id="book" class="book">
+        <!-- Paper 1 -->
+        <div id="p1" class="paper">
+            <div class="front">
+                <div id="f1" class="front-content">
+                    <!-- <h1>Front 1</h1> -->
+					<img style="width: 100%; height: 100%;" src="./book.jpg" alt="">
+                </div>
+            </div>
+            <div class="back">
+                <div id="b1" class="back-content">
+                    <h1>Back 1</h1>
+                </div>
+            </div>
+        </div>
+        <!-- Paper 2 -->
+        <div id="p2" class="paper">
+            <div class="front">
+                <div id="f2" class="front-content">
+                    <h1>Front 2</h1>
+                </div>
+            </div>
+            <div class="back">
+                <div id="b2" class="back-content">
+                    <h1>Back 2</h1>
+                </div>
+            </div>
+        </div>
+        <!-- Paper 3 -->
+        <div id="p3" class="paper">
+            <div class="front">
+                <div id="f3" class="front-content">
+                    <h1>Front 3</h1>
+                </div>
+            </div>
+            <div class="back">
+                <div id="b3" class="back-content">
+                    <!-- <h1>Back 3</h1> -->
+					<img style="width: 100%; height: 100%;" src="./book.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Next Button -->
+    <button id="next-btn">
+        <i class="fas fa-arrow-circle-right"></i>
+    </button>
+	</div>
+		</section>
+
+
+		<section>
+			<h1 class="r-fit-text" style="color: #3A8CD2;letter-spacing: .3rem;font-size: 1.8rem; margin-bottom: 3rem; font-weight: bolder">Vote of Thanks</h1>
+			<h1 class="r-fit-text" style="letter-spacing: .3rem;font-size: 2.5rem; margin-bottom: 3rem; font-weight: bolder">Dr. Deepika K,</h1>
+			<h1 class="r-fit-text" style="letter-spacing: .3rem;font-size: 2.5rem; margin-bottom: 3rem; font-weight: bolder">Programme Chair, ICOECA-2023</h1>
+			<!-- <h1 class="r-fit-text" style="letter-spacing: .3rem;font-size: 2.5rem; margin-bottom: 3rem; font-weight: bolder">ICOECA-2023</h1> -->
+		</section>
+      </div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script>
+      // More info about initialization & config:
+      // - https://revealjs.com/initialization/
+      // - https://revealjs.com/config/
+      Reveal.initialize({
+        hash: true,
+
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+      });
+    </script>
+
+	<script>
+		// References to DOM Elements
+const prevBtn = document.querySelector("#prev-btn");
+const nextBtn = document.querySelector("#next-btn");
+const book = document.querySelector("#book");
+
+const paper1 = document.querySelector("#p1");
+const paper2 = document.querySelector("#p2");
+const paper3 = document.querySelector("#p3");
+
+// Event Listener
+prevBtn.addEventListener("click", goPrevPage);
+nextBtn.addEventListener("click", goNextPage);
+
+// Business Logic
+let currentLocation = 1;
+let numOfPapers = 3;
+let maxLocation = numOfPapers + 1;
+
+function openBook() {
+    book.style.transform = "translateX(50%)";
+    prevBtn.style.transform = "translateX(-180px)";
+    nextBtn.style.transform = "translateX(180px)";
+}
+
+function closeBook(isAtBeginning) {
+    if(isAtBeginning) {
+        book.style.transform = "translateX(0%)";
+    } else {
+        book.style.transform = "translateX(100%)";
+    }
+    
+    prevBtn.style.transform = "translateX(0px)";
+    nextBtn.style.transform = "translateX(0px)";
+}
+
+function goNextPage() {
+    if(currentLocation < maxLocation) {
+        switch(currentLocation) {
+            case 1:
+                openBook();
+                paper1.classList.add("flipped");
+                paper1.style.zIndex = 1;
+                break;
+            case 2:
+                paper2.classList.add("flipped");
+                paper2.style.zIndex = 2;
+                break;
+            case 3:
+                paper3.classList.add("flipped");
+                paper3.style.zIndex = 3;
+                closeBook(false);
+                break;
+            default:
+                throw new Error("unkown state");
+        }
+        currentLocation++;
+    }
+}
+
+function goPrevPage() {
+    if(currentLocation > 1) {
+        switch(currentLocation) {
+            case 2:
+                closeBook(true);
+                paper1.classList.remove("flipped");
+                paper1.style.zIndex = 3;
+                break;
+            case 3:
+                paper2.classList.remove("flipped");
+                paper2.style.zIndex = 2;
+                break;
+            case 4:
+                openBook();
+                paper3.classList.remove("flipped");
+                paper3.style.zIndex = 1;
+                break;
+            default:
+                throw new Error("unkown state");
+        }
+
+        currentLocation--;
+    }
+}
+	</script>
+  </body>
+</html>
